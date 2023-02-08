@@ -6,41 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Using bootstrap</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-        * {
-            color: aliceblue;
-        }
-
-        .working-area {
-            width: 60%;
-            margin-left: 200px;
-        }
-
-        .Cake {
-            width: 100px;
-            height: 100px;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-
-        @media screen and (max-width: 600px) {
-            .working-area {
-                width: 100%;
-                margin: 0px;
-            }
-        }
-
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body style="
 background-image: url('asset/img.jpg');
 height: 100vh;
+font-family: 'Righteous', cursive;
 ">
 
     <div class="working-area">
@@ -50,111 +29,133 @@ height: 100vh;
                 <span> Please fill in your information and we'll be sending your order in no time.</span>
             </div>
             <form action="/action_page.php">
-                <div class="row">
+                <div class="row pb-4">
                     <div class="col-2 pb-4">
                         <label for="name">Name:</label>
                     </div>
-                    <div class="col-5">
-                        <input type="name" class="form-control" id="text" placeholder="First Name" name="Name">
+                    <div class="col-5 ps-0">
+                        <input type="name" class="form-control" placeholder="First Name" name="Name">
                     </div>
-                    <div class="col-5">
-                        <input type="name" class="form-control" id="text" placeholder="Last Name" name="Name">
+                    <div class="col-5 ps-0">
+                        <input type="name" class="form-control" placeholder="Last Name" name="Name">
                     </div>
                 </div>
 
 
-                <div class="row">
+                <div class="row pb-4">
                     <div class="col-2 pb-4">
                         <label for="email">Email:</label>
                     </div>
-                    <div class="col-5">
-                        <input type="email" class="form-control" id="text" placeholder="Email" name="Email">
+                    <div class="col-5 ps-0">
+                        <input type="email" class="form-control" placeholder="Email" name="Email">
                     </div>
 
-                    <div class="col-2">
+                    <div class="col-2 ps-0">
                         <label for="quantity">Quantity:</label>
                     </div>
-                    <div class="form-group col-3 text-dark">
-                        <select class="form-control" id="exampleFormControlSelect1 text-dark">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
+                    <div class="form-group col-3 ps-0">
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
                         </select>
-                      </div>
-                      
+                    </div>
+
                 </div>
 
 
-                <div class="row">
+                <div class="row pb-4">
                     <div class="col-2">
                         <label for="name">Shipping <br> Address:</label>
                     </div>
-                    <div class="col-10">
-                        <input type="text" class="form-control" id="text">
+                    <div class="col-5 ps-0">
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-2 ps-0">
+                        <label for="Pin">Zip Code:</label>
+                    </div>
+                    <div class="form-group col-3 ps-0">
+                        <input type="text7" title="Five digit zip code" class="form-control" />
                     </div>
                 </div>
-                <div class="row">
+                <div class="row pb-4">
                     <div class="col pb-4">
                         <label for="city and country"></label>
                     </div>
-                    <div class="col-5">
-                        <input type="text" class="form-control" id="text" placeholder="City" name="City">
+                    <div class="col-5 ps-0">
+                        <select class="form-control" placeholder="City" name="City">
+                            <option>Select City</option>
+                            <option>Kolkata</option>
+                            <option>Cooch Behar</option>
+                            <option>Malda</option>
+                            <option>Jalpaiguri</option>
+                            <option>Santiniketan</option>
+                        </select>
                     </div>
-                    <div class="col-5">
-                        <input type="text" class="form-control" id="text" placeholder="Country" name="Country">
+                    <div class="col-5 ps-0">
+                        <select class="form-control" placeholder="Country" name="Country">
+                            <option>Select Country</option>
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>Canada</option>
+                            <option>UK</option>
+                            <option>Bangladesh</option>
+                        </select>
                     </div>
                 </div>
 
 
-                <div class="row">
-                    <div class="col-2 pb-4">
+                <div class="row pb-4">
+                    <div class="col-2 pb-5">
                         <label for="city and country">Select your<br>products</label>
                     </div>
                     <div class="form-check col-5">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input " type="checkbox" value="">
                         <label class="form-check-label" for="flexCheckDefault">
                             <div class="Cake">
-                                <img src="asset/cake.png" alt="">
+                                <img src="asset/cake.png"  alt="">
                             </div>
                         </label>
                     </div>
 
                     <div class="form-check col-5">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="">
                         <label class="form-check-label" for="flexCheckDefault">
                             <div class="Cake">
-                                <img src="asset/cake.png" alt="">
+                                <img src="asset/cake2.png" alt="">
                             </div>
                         </label>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2 pb-4">
+                    <div class="col-2 pb-5">
                     </div>
                     <div class="form-check col-5">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="">
                         <label class="form-check-label" for="flexCheckDefault">
                             <div class="Cake">
-                                <img src="asset/cake.png" alt="">
+                                <img src="asset/cake3.png" alt="">
                             </div>
                         </label>
                     </div>
 
                     <div class="form-check col-5">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" type="checkbox" value="">
                         <label class="form-check-label" for="flexCheckDefault">
                             <div class="Cake">
-                                <img src="asset/cake.png" alt="">
+                                <img src="asset/cake4.png" alt="">
                             </div>
                         </label>
                     </div>
 
                 </div>
 
-                <button type="Purchase" class="btn btn-dark btn-xxl">Purchase</button>
-
+                
+                    <button type="Purchase" class="btn btn-warning btn-xxl">Purchase</button>
+                
 
             </form>
         </div>

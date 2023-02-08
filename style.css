@@ -1,0 +1,28 @@
+* {
+    color: aliceblue;
+}
+option{
+    color: black;
+}
+
+.working-area {
+    width: 60%;
+    margin-left: 200px;
+}
+
+.Cake {
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .working-area {
+        width: 100%;
+        margin: 0px;
+    }
+}
